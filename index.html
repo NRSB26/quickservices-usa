@@ -13,7 +13,9 @@ nav a {color:#fff; margin:0 15px; text-decoration:none;}
 .card {background:#fff; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);} 
 .button {display:inline-block; padding:10px 20px; background:#007BFF; color:#fff; border-radius:5px; text-decoration:none; margin-top:10px;}
 .coming {opacity:0.6;}
+.contact-box a {display:block; margin:8px 0; color:#007BFF; text-decoration:none;}
 footer {text-align:center; padding:20px; background:#111; color:#fff; margin-top:40px;}
+input {width:100%; padding:10px; margin:5px 0;}
 </style>
 </head>
 <body>
@@ -60,34 +62,34 @@ footer {text-align:center; padding:20px; background:#111; color:#fff; margin-top
 
 <section id="contact" class="section">
 <h2>Contact Us</h2>
-<p>Call or Text: <a href="tel:+10000000000">(000) 000-0000</a></p>
-<p>Or submit a request below:</p>
 
-<form id="leadForm">
-<input type="text" id="name" placeholder="Your Name" required><br><br>
-<input type="text" id="service" placeholder="Service Needed" required><br><br>
-<input type="text" id="location" placeholder="Your Location" required><br><br>
-<button class="button" type="submit">Submit</button>
+<div class="contact-box">
+<a href="mailto:nahumriquelmesolis@gmail.com">📧 Email: nahumriquelmesolis@gmail.com</a>
+<a href="tel:+19512301158">📞 Call: +1 (951) 230-1158</a>
+<a href="https://wa.me/19512301158" target="_blank">💬 WhatsApp Chat</a>
+</div>
+
+<h3>Send a Request</h3>
+
+<form action="https://formsubmit.co/nahumriquelmesolis@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="text" name="service" placeholder="Service Needed" required>
+
+<input type="text" name="location" placeholder="Your Location" required>
+
+<input type="hidden" name="_subject" value="New Quick Services USA Lead">
+<input type="hidden" name="_captcha" value="false">
+
+<button class="button" type="submit">Submit Request</button>
 </form>
 
-<p id="response"></p>
 </section>
 
 <footer>
 <p>© 2026 Quick Services USA</p>
 </footer>
-
-<script>
-document.getElementById("leadForm").addEventListener("submit", function(e){
- e.preventDefault();
- document.getElementById("response").innerText = "Thanks! We will contact you shortly.";
-});
-
-// Simple redirect example
-if(window.location.hash === "#book"){
- document.getElementById("contact").scrollIntoView();
-}
-</script>
 
 </body>
 </html>
