@@ -5,112 +5,175 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quick Services USA</title>
 <style>
-body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5;}
-header {background:#111; color:#fff; padding:20px; text-align:center;}
-nav a {color:#fff; margin:0 15px; text-decoration:none;}
-.hero {padding:60px 20px; text-align:center; background:#222; color:#fff;}
-.section {padding:40px 20px; max-width:1000px; margin:auto;}
-.card {background:#fff; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);} 
-.button {display:inline-block; padding:10px 20px; background:#007BFF; color:#fff; border-radius:5px; text-decoration:none; margin-top:10px;}
-.coming {opacity:0.6;}
-.contact-box a {display:block; margin:8px 0; color:#007BFF; text-decoration:none;}
-footer {text-align:center; padding:20px; background:#111; color:#fff; margin-top:40px;}
-input {width:100%; padding:10px; margin:5px 0;}
+:root {
+  --bg-dark: #111;
+  --bg-mid: #222;
+  --accent: #007BFF;
+  --gap: 20px;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  line-height: 1.6;
+}
+
+header, footer {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: var(--gap);
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 60px var(--gap);
+  text-align: center;
+  background: var(--bg-mid);
+  color: #fff;
+}
+
+.section {
+  padding: 40px var(--gap);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  padding: var(--gap);
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card.coming { opacity: 0.6; }
+
+.button {
+  display: inline-block;
+  padding: 10px var(--gap);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-box a {
+  display: block;
+  margin: 8px 0;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.flex-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+footer { margin-top: 40px; }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Quick Services USA</h1>
-<nav>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+  <h1>Quick Services USA</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-<h2>Fast, Affordable Local Services Near You</h2>
-<p>Connecting you with trusted professionals.</p>
-<a class="button" href="#contact">Book Now</a>
+  <h2>Fast, Affordable Local Services Near You</h2>
+  <p>Connecting you with trusted professionals.</p>
+  <a class="button" href="#contact">Book Now</a>
 </section>
 
 <section id="services" class="section">
-<h2>Our Services</h2>
+  <h2>Our Services</h2>
 
-<div class="card">
-<h3>🚗 Mobile Car Detailing (Available Now)</h3>
-<p>Interior & exterior cleaning. Same-day appointments available.</p>
-<a class="button" href="#contact">Request Service</a>
-</div>
+  <div class="card">
+    <h3>🚗 Mobile Car Detailing (Available Now)</h3>
+    <p>Interior & exterior cleaning. Same-day appointments available.</p>
+    <a class="button" href="#contact">Request Service</a>
+  </div>
 
-<div class="card coming">
-<h3>🧹 House Cleaning (Coming Soon)</h3>
-<p>Professional home cleaning services launching soon.</p>
-</div>
+  <div class="card coming">
+    <h3>🧹 House Cleaning (Coming Soon)</h3>
+    <p>Professional home cleaning services launching soon.</p>
+  </div>
 
-<div class="card coming">
-<h3>🗑️ Junk Removal (Coming Soon)</h3>
-<p>Fast and affordable junk hauling—coming soon.</p>
-</div>
+  <div class="card coming">
+    <h3>🗑️ Junk Removal (Coming Soon)</h3>
+    <p>Fast and affordable junk hauling—coming soon.</p>
+  </div>
 
-<div class="card coming">
-<h3>🔧 Mobile Mechanic (Coming Soon)</h3>
-<p>On-demand car repair services at your location.</p>
-</div>
-
+  <div class="card coming">
+    <h3>🔧 Mobile Mechanic (Coming Soon)</h3>
+    <p>On-demand car repair services at your location.</p>
+  </div>
 </section>
 
 <section id="contact" class="section">
-<h2>Contact Us</h2>
+  <h2>Contact Us</h2>
 
-<div class="contact-box">
-<a href="mailto:nahumriquelmesolis@gmail.com">📧 Email: nahumriquelmesolis@gmail.com</a>
-<a href="tel:+19512301158">📞 Call: +1 (951) 230-1158</a>
-<a href="https://wa.me/19512301158" target="_blank">💬 WhatsApp Chat</a>
-</div>
+  <div class="contact-box">
+    <a href="mailto:nahumriquelmesolis@gmail.com">📧 Email: nahumriquelmesolis@gmail.com</a>
+    <a href="tel:+19512301158">📞 Call: +1 (951) 230-1158</a>
+    <a href="https://wa.me/19512301158" target="_blank">💬 WhatsApp Chat</a>
+  </div>
 
-<h3>Send a Request</h3>
+  <div class="flex-row">
+    <div class="col">
+      <h3>Send a Request</h3>
+      <form action="https://formsubmit.co/nahumriquelmesolis@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="service" placeholder="Service Needed" required>
+        <input type="text" name="location" placeholder="Your Location" required>
+        <input type="text" name="contact" placeholder="Your Phone or Email" required>
+        <textarea name="details" placeholder="Additional Details (optional)" rows="4"></textarea>
+        <input type="hidden" name="_subject" value="New Quick Services USA Lead">
+        <input type="hidden" name="_captcha" value="false">
+        <button class="button" type="submit">Submit Request</button>
+      </form>
+    </div>
 
-<div style="display:flex; gap:30px; flex-wrap:wrap;">
-
-<div style="flex:1; min-width:250px;">
-<h3>Send a Request</h3>
-<form action="https://formsubmit.co/nahumriquelmesolis@gmail.com" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="text" name="service" placeholder="Service Needed" required>
-
-<input type="text" name="location" placeholder="Your Location" required>
-
-<input type="text" name="contact" placeholder="Your Phone or Email" required>
-
-<textarea name="details" placeholder="Additional Details (optional)" style="width:100%; padding:10px; margin:5px 0;"></textarea>
-
-<input type="hidden" name="_subject" value="New Quick Services USA Lead">
-<input type="hidden" name="_captcha" value="false">
-
-<button class="button" type="submit">Submit Request</button>
-
-</form>
-</div>
-
-<div style="flex:1; min-width:250px;">
-<h3>Contact Information</h3>
-<p>Prefer direct contact? Reach out below:</p>
-<div class="contact-box">
-<a href="mailto:nahumriquelmesolis@gmail.com">📧 Email: nahumriquelmesolis@gmail.com</a>
-<a href="tel:+19512301158">📞 Call: +1 (951) 230-1158</a>
-<a href="https://wa.me/19512301158" target="_blank">💬 WhatsApp Chat</a>
-</div>
-</div>
-
-</div>
-
+    <div class="col">
+      <h3>Contact Information</h3>
+      <p>Prefer direct contact? Reach out below:</p>
+      <div class="contact-box">
+        <a href="mailto:nahumriquelmesolis@gmail.com">📧 Email: nahumriquelmesolis@gmail.com</a>
+        <a href="tel:+19512301158">📞 Call: +1 (951) 230-1158</a>
+        <a href="https://wa.me/19512301158" target="_blank">💬 WhatsApp Chat</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 Quick Services USA</p>
+  <p>&copy; 2026 Quick Services USA</p>
 </footer>
 
 </body>
